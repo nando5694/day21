@@ -406,12 +406,12 @@
             if (month < 2) return false; // Antes de febrero
             if (month > 2) return true; // Marzo en adelante
             
-            if (day < 8) return false; // Antes del día 9
-            if (day > 8) return true; // Día 10 en adelante
+            if (day < 9) return false; // Antes del día 9
+            if (day > 9) return true; // Día 10 en adelante
             
             // Verificación de hora exacta:
-            if (hour < 23) return false; // Antes de las 5 PM (0-16)
-            if (hour === 23 && minute < 43) return false; // Es la hora 17, pero antes de los 30 min
+            if (hour < 17) return false; // Antes de las 5 PM (0-16)
+            if (hour === 17 && minute < 30) return false; // Es la hora 17, pero antes de los 30 min
             
             // Si llega aquí, es 17:30 o más tarde, o una hora mayor a 17 (18, 19...)
             return true;
